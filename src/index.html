@@ -8,6 +8,38 @@
 </head>
 
 <body>
+  <section id="title_container" >
+    <div class="title"><h1>Leaderboard</h1></div>
+  </section>
+
+  <section id="scores_container">
+
+      <div id="recent_scores">
+        <div id="title_secondary">
+          <div><h2>Recent Scores</h2></div>
+          <div id="submit_button"><button type="click" id="refresh">Refresh</button></div>
+        </div>
+        <ul id="scores_list">
+          <li class="scores">Name: 100</li>
+          <li class="scores">Name:  20</li>
+          <li class="scores">Name:  50</li>
+          <li class="scores">Name:  78</li>
+          <li class="scores">Name: 125</li>
+          <li class="scores">Name:  77</li>
+          <li class="scores">Name:  42</li>
+        </ul>
+      </div>
+
+      <div id="add_name_scores">
+        <div id="title_secondary_form"><h2>Add your score</h2></div>
+        <form>
+          <input type="text" name="name" class="score_input" placeholder="Your name">
+          <input type="text" name="score" class="score_input" placeholder="Your score">
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>  
+
+  </section>
   
 </body>
 </html>

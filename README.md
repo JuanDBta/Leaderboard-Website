@@ -57,9 +57,11 @@
 
 - **[Added index.html]**
 - **[Added style.css]**
+- **[Added index.js]**
+- **[Added /src]**
+- **[Added /dist]**
 - **[Added /modules]**
-- **[Added /images]**
-- **[Added /webpack]**
+- **[Added /assets]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

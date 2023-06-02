@@ -2,7 +2,7 @@
 
 <div align="center">
  
-  <img src="src\assets/cardenasbackground.jpg" alt="logo" width="160"  height="auto">
+  <img src="src\assets/project-screenshot.jpg" alt="logo" width="160"  height="auto">
   <br/>
 
   <h3><b>Leaderboard Website</b></h3>
@@ -40,7 +40,8 @@
 1- HTML<br>
 2- CSS<br>
 3- JS<br>
-4- WEBPACK
+4- WEBPACK<br>
+5- API<br>   https://us-central1-js-capstone-backend.cloudfunctions.net/api
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -112,7 +113,7 @@ Open mobile.html using live server extension.
 👤 **Micronaut JUAN DAVID DIAZ**
 
 - GitHub: [@JuanDBta](https://github.com/JuanDBta)
-- Twitter: [@diazgjuan](https://twitter.com/simplebetsas)
+- Twitter: [@simpbletsas](https://twitter.com/simplebetsas)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/simplebet/)
 
 

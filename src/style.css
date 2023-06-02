@@ -1,6 +1,20 @@
+body {
+  background-color: rgb(255, 252, 89);
+}
+
 .title {
-  margin-left: 22vw;
-  font-size: 3vw;
+  margin-left: 15vw;
+  font-size: 3.5vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 800;
+}
+
+.recent {
+  font-size: 2vw;
+  margin-left: 0;
+  margin-top: -2vw;
+  font-weight: 400;
+  color: black;
 }
 
 #scores_container {
@@ -11,15 +25,41 @@
   gap: 10vw;
 }
 
+#recent_scores {
+  width: 30vw;
+}
+
 #title_secondary {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2vw;
+  font-weight: 400;
+  margin-top: -2vw;
+}
+
+#title_secondary_form {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2vw;
+  font-weight: 400;
+  margin-top: -2vw;
 }
 
 #submit_button {
-  margin-top: 2.5vw;
+  margin-top: 1.1vw;
   margin-left: 0.5vw;
+}
+
+#refresh {
+  font-size: 1.5vw;
+  background-color: rgb(199, 156, 240);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #scores_list {
@@ -27,6 +67,7 @@
   text-align: left;
   padding-left: 0;
   border: 3px black solid;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #add_name_scores {
@@ -34,11 +75,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-top: -2vw;
 }
 
 form {
-  margin-top: 1.5vw;
-  margin-left: 0.5vw;
+  margin-top: 0.5vw;
+  margin-left: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,24 +89,39 @@ form {
 
 input {
   margin-top: 0.5vw;
-  margin-bottom: 1vw;
+  margin-bottom: 1.5vw;
+  width: 15vw;
+  height: 1.5vw;
   padding: 0.5vw;
+  background-color: rgba(204, 199, 201, 0.226);
+  font-style: italic;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #submit {
   margin-top: 0.5vw;
-  margin-left: 12.5vw;
+  margin-left: 10.5vw;
+  background-color: rgb(199, 156, 240);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  font-size: 1.5vw;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .score {
   border-bottom: 0.5px black solid;
   height: 2.5vw;
-  padding-left: 0.2vw;
+  padding-left: 0.7vw;
   padding-top: 0.6vw;
   text-align: left;
   font-size: 1.5vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .score:nth-child(even) {
-  background-color: rgb(212, 209, 209);
+  background-color: rgb(199, 156, 240);
+}
+
+.score:nth-child(odd) {
+  background-color: rgba(204, 199, 201, 0.226);
 }

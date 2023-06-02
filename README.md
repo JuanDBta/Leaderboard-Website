@@ -40,7 +40,7 @@
 1- HTML<br>
 2- CSS<br>
 3- JS<br>
-4- WEBPACK
+4- WEBPACK<br>
 5- API https://us-central1-js-capstone-backend.cloudfunctions.net/api
 
 ### Tech Stack <a name="tech-stack"></a>

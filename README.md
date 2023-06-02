@@ -2,7 +2,7 @@
 
 <div align="center">
  
-  <img src="src\assets/cardenasbackground.jpg" alt="logo" width="160"  height="auto">
+  <img src="src\assets/project-screenshot.jpg" alt="logo" width="160"  height="auto">
   <br/>
 
   <h3><b>Leaderboard Website</b></h3>
@@ -41,7 +41,7 @@
 2- CSS<br>
 3- JS<br>
 4- WEBPACK
-5- API
+5- API https://us-central1-js-capstone-backend.cloudfunctions.net/api
 
 ### Tech Stack <a name="tech-stack"></a>
 

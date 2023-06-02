@@ -6,6 +6,18 @@ const addScoreForm = document.getElementById('add_scores_form');
 
 let gameId = null;
 
+const displayScores = (scores) => {
+  const scoreList = document.getElementById('scores_list');
+  scoreList.innerHTML = '';
+  scores.forEach((score) => {
+    const scoreItem = document.createElement('li');
+    scoreItem.classList.add('score');
+    scoreItem.innerHTML = `${score.user} : ${score.score}`;
+    scoreList.appendChild(scoreItem);
+  });
+};
+
+
 refreshButton.addEventListener('click', async () => {
   if (gameId) {
     const scores = await getScores(gameId);
@@ -27,14 +39,3 @@ addScoreForm.addEventListener('submit', async (event) => {
   const gameName = 'Art of War';
   gameId = await createGame(gameName);
 })();
-
-const displayScores = (scores) => {
-  const scoreList = document.getElementById('scores_list');
-  scoreList.innerHTML = '';
-  scores.forEach((score) => {
-    const scoreItem = document.createElement('li');
-    scoreItem.classList.add('score');
-    scoreItem.innerHTML = `${score.user} : ${score.score}`;
-    scoreList.appendChild(scoreItem);
-  });
-};

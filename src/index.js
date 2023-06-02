@@ -17,7 +17,6 @@ const displayScores = (scores) => {
   });
 };
 
-
 refreshButton.addEventListener('click', async () => {
   if (gameId) {
     const scores = await getScores(gameId);

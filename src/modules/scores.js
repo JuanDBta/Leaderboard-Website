@@ -1,24 +1,40 @@
-export class Scores {
-  constructor() {
-    this.scores = JSON.parse(localStorage.getItem('scores')) || [];
-  }
+const BASE_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
 
-  addScore = (name, number) => {
-    const score = { name, number };
-    this.scores.push(score);
-    localStorage.setItem('scores', JSON.stringify(this.scores));
-  }
+const createGame = async (name) => {
+  const response = await fetch(`${BASE_URL}/games/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name,
+    }),
+  });
+  const data = await response.json();
+  return data.result;
+};
 
-  displayScores = () => {
-    const scoreList = document.getElementById('scores_list');
-    scoreList.innerHTML = '';
-    this.scores.forEach((score) => {
-      const scoreItem = document.createElement('li');
-      scoreItem.classList.add('score');
-      scoreItem.innerHTML = `${score.name} : ${score.number}`;
-      scoreList.appendChild(scoreItem);
-    });
-  }
-}
+const getScores = async (gameId) => {
+  const response = await fetch(`${BASE_URL}/games/${gameId}/scores/`);
+  const data = await response.json();
+  return data.result;
+};
 
-export default { Scores };
+const addScore = async (gameId, user, score) => {
+  await fetch(`${BASE_URL}/games/${gameId}/scores/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      user,
+      score,
+    }),
+  });
+};
+
+export {
+  createGame,
+  getScores,
+  addScore,
+};

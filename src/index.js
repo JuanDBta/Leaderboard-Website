@@ -1,20 +1,40 @@
 import './style.css';
-import { Scores } from './modules/scores.js';
+import { createGame, getScores, addScore } from './modules/scores.js';
 
-const scores = new Scores();
-scores.displayScores();
-
+const refreshButton = document.getElementById('refresh');
 const addScoreForm = document.getElementById('add_scores_form');
-addScoreForm.addEventListener('submit', (event) => {
+
+let gameId = null;
+
+const displayScores = (scores) => {
+  const scoreList = document.getElementById('scores_list');
+  scoreList.innerHTML = '';
+  scores.forEach((score) => {
+    const scoreItem = document.createElement('li');
+    scoreItem.classList.add('score');
+    scoreItem.innerHTML = `${score.user} : ${score.score}`;
+    scoreList.appendChild(scoreItem);
+  });
+};
+
+refreshButton.addEventListener('click', async () => {
+  if (gameId) {
+    const scores = await getScores(gameId);
+    displayScores(scores);
+  }
+});
+
+addScoreForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const name = document.getElementById('name_input').value;
-  const number = document.getElementById('score_input').value;
-  scores.addScore(name, number);
-  addScoreForm.reset();
+  const score = document.getElementById('score_input').value;
+  if (gameId) {
+    await addScore(gameId, name, score);
+    addScoreForm.reset();
+  }
 });
 
-const displayScoreRefresh = document.getElementById('refresh');
-displayScoreRefresh.addEventListener('click', (event) => {
-  event.preventDefault();
-  scores.displayScores();
-});
+(async () => {
+  const gameName = 'Art of War';
+  gameId = await createGame(gameName);
+})();

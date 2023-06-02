@@ -113,7 +113,7 @@ Open mobile.html using live server extension.
 👤 **Micronaut JUAN DAVID DIAZ**
 
 - GitHub: [@JuanDBta](https://github.com/JuanDBta)
-- Twitter: [@diazgjuan](https://twitter.com/simplebetsas)
+- Twitter: [@simpbletsas](https://twitter.com/simplebetsas)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/simplebet/)
 
 
